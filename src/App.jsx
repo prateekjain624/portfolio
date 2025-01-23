@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Element } from "react-scroll";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
         <Element name="contact">
           <Contact />
         </Element>
+        <Footer />
       </div>
     </>
   );

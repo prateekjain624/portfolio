@@ -308,24 +308,34 @@ body {
 
 /* CONTACT */
 
+.contact {
+  padding: 20px;
+}
+
 .contact_me {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
 .contact_me .items {
   background-color: black;
-  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
   width: 70px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 2px solid yellow;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact_me .items:hover {
+  transform: scale(1.1);
 }
 
 .contact_me .items .icons {
