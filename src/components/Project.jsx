@@ -1,46 +1,56 @@
 import React from "react";
 import projects from "./Data/projects.json";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export const Project = () => {
   return (
-    <>
-      <div className="container my-3 projects">
-        <h1>PROJECTS</h1>
-        <div className="row d-flex project justify-content-center align-content-center">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="my-4 col-sm-6 col-md-4 col-lg-3 mx-4 "
-              data-AOS="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-AOS-duration="1500"
-            >
-              <div
-                className="card bg-dark text-light "
-                style={{ width: "18rem" }}
-              >
-                <div className="img">
-                  <img
-                    src={project.imageSrc}
-                    className="card-img-top"
-                    alt={project.title}
-                  />
-                </div>
-                <div className="card-body text-center">
-                  <h5 className="card-title">{project.title}</h5>
-                  <p className="card-text">{project.description}</p>
-                  <a href={project.demo} className="btn btn-primary mx-3">
-                    Demo
-                  </a>
-                  <a href={project.source} className="btn btn-warning">
-                    Code
-                  </a>
-                </div>
+    <Container className="my-3 projects">
+      <h1>PROJECTS</h1>
+      <Row className="justify-content-center">
+        {projects.map((project) => (
+          <Col
+            key={project.id}
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            className="d-flex align-items-stretch my-3"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          >
+            <Card className="bg-dark text-light w-100">
+              <div className="img">
+                <Card.Img
+                  variant="top"
+                  src={project.imageSrc}
+                  alt={project.title}
+                />
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+              <Card.Body className="text-center d-flex flex-column">
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <div className="mt-auto">
+                  <Button
+                    href={project.demo}
+                    variant="primary"
+                    className="mx-2"
+                  >
+                    Demo
+                  </Button>
+                  <Button
+                    href={project.source}
+                    variant="warning"
+                    className="mx-2"
+                  >
+                    Code
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };

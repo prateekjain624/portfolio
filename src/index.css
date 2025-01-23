@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --box-shadow: 5px 5px 10px 10px rgba(101, 175, 10, 0.5);
   --bg-color: rgb(40, 47, 97);
@@ -34,20 +40,20 @@ body {
 
 .home {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  height: auto; /* Adjust height for smaller screens */
+  flex-wrap: wrap;
+  height: auto;
   justify-content: space-evenly;
   margin-top: 5rem;
   align-items: center;
   padding: 20px;
 
-  gap: 20px; /* Add spacing between elements */
+  gap: 20px;
 }
 
 .home .left {
   background-color: var(--bg-color);
-  flex: 1; /* Allow the left section to grow and shrink */
-  min-width: 300px; /* Ensure a minimum width for smaller screens */
+  flex: 1;
+  min-width: 300px;
   max-width: 600px;
   text-align: center;
   padding: 20px;
@@ -57,11 +63,11 @@ body {
 }
 
 .home .right {
-  flex: 1; /* Allow the right section to grow and shrink */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 300px; /* Ensure a minimum width for smaller screens */
+  min-width: 300px;
 }
 
 .home .right .img {
@@ -84,35 +90,35 @@ body {
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
   .home {
-    flex-direction: column; /* Stack items vertically */
-    height: auto; /* Adjust height to fit content */
+    flex-direction: column;
+    height: auto;
     padding: 20px;
   }
 
   .home .left,
   .home .right {
-    max-width: 100%; /* Allow full width for smaller screens */
-    margin: 2rem auto; /* Center the sections */
+    max-width: 100%;
+    margin: 2rem auto;
   }
 
   .home .left {
-    padding: 15px; /* Reduce padding */
+    padding: 15px;
   }
 
   .home .right .img img {
-    height: 200px; /* Reduce image size for smaller screens */
+    height: 200px;
     width: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .home .right .img img {
-    height: 150px; /* Further reduce image size for very small screens */
+    height: 150px;
     width: 150px;
   }
 
   .home .left {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
     padding: 10px;
   }
 }
@@ -148,11 +154,10 @@ body {
 /* EXPERIENCE SECTION */
 
 .experience {
-  max-width: 1200px; /* Use max-width for better scaling on smaller screens */
-  width: 100%; /* Ensure it takes full width on smaller screens */
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .experience_card {
@@ -186,9 +191,9 @@ body {
 }
 
 .experience .experience_card .ex-right {
-  flex: 1; /* Allow the right section to grow and shrink */
-  min-width: 200px; /* Set a minimum width for smaller screens */
-  text-align: left; /* Align text to the left */
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
 }
 
 /* Media queries for responsiveness */
@@ -196,17 +201,17 @@ body {
 /* For tablets and medium screens (max-width: 768px) */
 @media (max-width: 768px) {
   .experience_card {
-    flex-direction: column; /* Stack content vertically */
-    text-align: center; /* Center-align text for smaller screens */
-    padding: 15px; /* Reduce padding */
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
   }
 
   .experience .experience_card .ex-right {
-    text-align: center; /* Center-align text in the right section */
+    text-align: center;
   }
 
   .experience .experience_card .ex-left {
-    width: 80px; /* Reduce image size */
+    width: 80px;
     height: 80px;
   }
 }
@@ -214,44 +219,44 @@ body {
 /* For mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
   .experience_card {
-    padding: 10px; /* Further reduce padding */
+    padding: 10px;
   }
 
   .experience .experience_card .ex-left {
-    width: 60px; /* Further reduce image size */
+    width: 60px;
     height: 60px;
   }
 
   .experience .experience_card .ex-right h2 {
-    font-size: 18px; /* Adjust font size for better readability */
+    font-size: 18px;
   }
 
   .experience .experience_card .ex-right h4,
   .experience .experience_card .ex-right h5 {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
   }
 }
 
 /* SKILLS SECTION */
 
 .skills {
-  /* border: 2px solid red; */
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 .skills .items {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  /* border: 2px solid red; */
   flex-wrap: wrap;
 }
 
 .skills .items .item {
-  width: calc(33.33%);
+  flex: 1 1 calc(33.33% - 20px); /* Default: 3 columns */
   background-color: black;
-  margin: 20px;
+  margin: 10px;
   text-align: center;
   border-radius: 10px;
   border: 1px solid yellow;
@@ -263,12 +268,21 @@ body {
   width: 70px;
 }
 
-/* PROJECTS SECTION */
-
-.projects {
-  width: 1200px;
-  /* border: 2px solid green; */
+/* For screens between 992px and 1199px (laptops) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .skills .items .item {
+    flex: 1 1 calc(50% - 20px); /* 2 columns */
+  }
 }
+
+/* For screens below 992px (tablets and mobiles) */
+@media (max-width: 991px) {
+  .skills .items .item {
+    flex: 1 1 calc(100% - 20px); /* 1 column */
+  }
+}
+
+/* PROJECTS SECTION */
 
 .projects .img {
   display: flex;
@@ -279,7 +293,8 @@ body {
 
 .projects .img img {
   height: 200px;
-  width: 250px;
+  width: 100%;
+  object-fit: cover;
   border: 2px solid yellow;
   border-radius: 10px;
 }

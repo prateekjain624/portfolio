@@ -23,7 +23,7 @@ function App() {
         <Element name="experience">
           <Experience />
         </Element>
-        {/* <Element name="skill">
+        <Element name="skill">
           <Skills />
         </Element>
         <Element name="project">
@@ -31,7 +31,7 @@ function App() {
         </Element>
         <Element name="contact">
           <Contact />
-        </Element> */}
+        </Element>
       </div>
     </>
   );
