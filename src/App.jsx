@@ -20,7 +20,7 @@ function App() {
         <Element name="home">
           <Home />
         </Element>
-        <Element name="experience">
+        {/* <Element name="experience">
           <Experience />
         </Element>
         <Element name="skill">
@@ -31,7 +31,7 @@ function App() {
         </Element>
         <Element name="contact">
           <Contact />
-        </Element>
+        </Element> */}
       </div>
     </>
   );

@@ -3,34 +3,52 @@ import { Link } from "react-scroll";
 
 export const Navbar = () => {
   return (
-    <div
-      className="container nav_bar"
-      data-AOS="fade-down"
-      data-AOS-duration="1000"
-    >
-      <div className="left nav_items">PortFolio</div>
-      <div className="right">
-        <Link to="home" smooth={true} duration={500} className="nav_items">
-          Home
-        </Link>
-        <Link
-          to="experience"
-          smooth={true}
-          duration={500}
-          className="nav_items"
-        >
-          Experience
-        </Link>
-        <Link to="skill" smooth={true} duration={500} className="nav_items">
-          Skills
-        </Link>
-        <Link to="project" smooth={true} duration={500} className="nav_items">
-          Project
-        </Link>
-        <Link to="contact" smooth={true} duration={500} className="nav_items">
-          Contact
-        </Link>
-      </div>
-    </div>
+    <>
+      <nav className="navbar  navbar-expand-lg ">
+        <div className="container">
+          <h2>Portfolio</h2>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarText">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className=" nav_items right">
+                <Link className=" active" aria-current="page" to="home">
+                  Home
+                </Link>
+              </li>
+              <li className="nav_items right">
+                <Link className="" to="experience">
+                  Experience
+                </Link>
+              </li>
+              <li className="nav_items right">
+                <Link className="" to="skill">
+                  Skills
+                </Link>
+              </li>
+              <li className="nav_items right">
+                <Link className="" to="project">
+                  Project
+                </Link>
+              </li>
+              <li className="nav_items right">
+                <Link className="" to="contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
