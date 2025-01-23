@@ -148,34 +148,88 @@ body {
 /* EXPERIENCE SECTION */
 
 .experience {
-  width: 1200px;
-  /* border: 2px solid red; */
+  max-width: 1200px; /* Use max-width for better scaling on smaller screens */
+  width: 100%; /* Ensure it takes full width on smaller screens */
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .experience_card {
   text-align: center;
   background-color: var(--bg-color);
   display: flex;
+  flex-wrap: wrap; /* Allow content to wrap for smaller screens */
   align-items: center;
   border-radius: 10px;
   border: 1px solid yellow;
-  align-items: center;
-  width: 800px;
-  margin: auto;
-  padding: 30px;
+  width: 100%; /* Ensure it takes full width by default */
+  max-width: 800px; /* Limit the width on larger screens */
+  margin: 20px auto; /* Add spacing between cards */
+  padding: 20px;
   box-shadow: var(--box-shadow);
-
   justify-content: space-evenly;
+  gap: 20px; /* Add spacing between elements inside the card */
 }
 
 .experience .experience_card .ex-left {
   width: 100px;
   height: 100px;
+  flex-shrink: 0; /* Prevent shrinking of the image container */
 }
 
 .experience .experience_card .ex-left img {
   width: 100%;
+  height: 100%; /* Ensure the image takes full height */
   border-radius: 10%;
+  object-fit: cover; /* Ensure the image fits well */
+}
+
+.experience .experience_card .ex-right {
+  flex: 1; /* Allow the right section to grow and shrink */
+  min-width: 200px; /* Set a minimum width for smaller screens */
+  text-align: left; /* Align text to the left */
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .experience_card {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text for smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .experience .experience_card .ex-right {
+    text-align: center; /* Center-align text in the right section */
+  }
+
+  .experience .experience_card .ex-left {
+    width: 80px; /* Reduce image size */
+    height: 80px;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .experience_card {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .experience .experience_card .ex-left {
+    width: 60px; /* Further reduce image size */
+    height: 60px;
+  }
+
+  .experience .experience_card .ex-right h2 {
+    font-size: 18px; /* Adjust font size for better readability */
+  }
+
+  .experience .experience_card .ex-right h4,
+  .experience .experience_card .ex-right h5 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }
 
 /* SKILLS SECTION */

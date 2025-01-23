@@ -20,10 +20,10 @@ function App() {
         <Element name="home">
           <Home />
         </Element>
-        {/* <Element name="experience">
+        <Element name="experience">
           <Experience />
         </Element>
-        <Element name="skill">
+        {/* <Element name="skill">
           <Skills />
         </Element>
         <Element name="project">
