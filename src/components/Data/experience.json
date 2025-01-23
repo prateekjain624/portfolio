@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "role": "Tron Associate",
+    "organisation": "Amazon",
+    "startDate": "Feb 2021",
+    "endDate": "Feb 2022",
+    "location": "Bengaluru,India",
+    "experiences": [
+      "Worked on Amazon WareHouse"
+      ],
+    "imageSrc": "company/amazon_logo.webp"
+  }
+  
+]
