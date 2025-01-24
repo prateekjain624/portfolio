@@ -23,7 +23,7 @@ export const Project = () => {
               <div className="img">
                 <Card.Img
                   variant="top"
-                  src={project.imageSrc}
+                  src={`/assets/${project.imageSrc}`}
                   alt={project.title}
                 />
               </div>
