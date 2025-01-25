@@ -4,7 +4,11 @@ import { Link } from "react-scroll";
 export const Navbar = () => {
   return (
     <>
-      <nav className="navbar  navbar-expand-lg ">
+      <nav
+        className="navbar  navbar-expand-lg "
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
         <div className="container">
           <h2>Portfolio</h2>
           <button

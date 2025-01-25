@@ -38,7 +38,11 @@ export const Contact = () => {
   return (
     <>
       <h1>CONTACT ME</h1>
-      <div className="container contact">
+      <div
+        className="container contact"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="contact_form">
           <form onSubmit={onSubmit}>
             <div className="input-box">
