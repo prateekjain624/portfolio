@@ -39,11 +39,7 @@ export const Contact = () => {
     <>
       <h1>CONTACT ME</h1>
       <div className="container contact">
-        <div
-          className="contact_form"
-          data-aos="flip-down"
-          data-aos-duration="1000"
-        >
+        <div className="contact_form">
           <form onSubmit={onSubmit}>
             <div className="input-box">
               <input

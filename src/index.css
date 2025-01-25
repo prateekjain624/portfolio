@@ -317,7 +317,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-block: 1.5rem;
-  min-height: 100vh;
+
   flex-direction: column; /* Adjust for small screens */
 }
 
