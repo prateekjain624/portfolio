@@ -9,7 +9,7 @@ export const Project = () => {
       <Row className="justify-content-center">
         {projects.map((project) => (
           <Col
-            key={project.id}
+            key={project.key}
             xs={12}
             sm={6}
             md={4}

@@ -8,7 +8,12 @@ export const Skills = () => {
         <h1>SKILLS</h1>
         <div className="items">
           {skills.map((skill) => (
-            <div className="item" data-AOS="flip-down" data-AOS-duration="1000">
+            <div
+              key={skill.id}
+              className="item"
+              data-aos="flip-down"
+              data-aos-duration="1000"
+            >
               <img src={`/assets/${skill.imageSrc}`} alt={skill.title} />
               <h3 className="mt-2">{skill.title}</h3>
             </div>

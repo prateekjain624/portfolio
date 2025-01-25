@@ -9,8 +9,8 @@ export const Experience = () => {
         <div
           key={experience.id}
           className="experience_card my-5"
-          data-AOS="zoom-in-up"
-          data-AOS-duration="1000"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
         >
           <div className="ex-left">
             <img src={`/assets/${experience.imageSrc}`} alt={experience.role} />

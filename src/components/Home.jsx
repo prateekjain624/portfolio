@@ -27,7 +27,7 @@ export const Home = () => {
 
   return (
     <div className="container home">
-      <div className="left" data-AOS="fade-up-right" data-AOS-duration="1000">
+      <div className="left" data-aos="fade-up-right" data-aos-duration="1000">
         <h1 ref={typedRef}></h1>
         <a
           href={pdf}
@@ -38,7 +38,7 @@ export const Home = () => {
         </a>
       </div>
       <div className="right">
-        <div className="img" data-AOS="fade-up-left" data-AOS-duration="1000">
+        <div className="img" data-aos="fade-up-left" data-aos-duration="1000">
           <img src={`/assets/${hero.imgSrc}`} alt="hero image" />
         </div>
       </div>
